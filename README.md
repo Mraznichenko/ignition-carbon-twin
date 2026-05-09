@@ -21,7 +21,7 @@ Carbon Twin is a TanStack Start prototype for a personal AI carbon digital twin.
 - Recharts and Radix UI components
 - Optional Kimi/Moonshot API calls for profile inference and advisor responses
 
-## Getting Started
+## Local Development
 
 Install dependencies:
 
@@ -41,6 +41,15 @@ The app runs on:
 http://localhost:8080
 ```
 
+Stop the local server with `Ctrl+C`.
+
+If port `8080` is stuck:
+
+```bash
+lsof -tiTCP:8080 -sTCP:LISTEN
+kill <PID>
+```
+
 Build for production:
 
 ```bash
@@ -53,7 +62,7 @@ Run linting:
 npm run lint
 ```
 
-## Environment Variables
+## Local Environment Variables
 
 Create `.env.local` for local API credentials. The app works without these keys, but AI profile inference and enriched advisor responses need one of the API keys below.
 
@@ -68,6 +77,8 @@ KIMI_BASE_URL=https://api.moonshot.ai/v1
 ```
 
 If no API key is configured, the advisor falls back to deterministic local advice where available, and API-backed profile inference will report that the key is missing.
+
+Do not paste `.env.local` into chats, tickets, or docs. If a key is exposed, regenerate it.
 
 ## Prototype Flow
 
@@ -92,14 +103,52 @@ The repository includes carbon knowledge and product data under `data`, `raw-dat
 npm run build:product-index
 ```
 
-## Deployment Notes
+## Deploy With Wrangler
 
 The project is configured for Cloudflare-compatible builds through `@cloudflare/vite-plugin` and `wrangler.jsonc`. Server routes are handled in `src/server.ts`, including:
 
 - `/api/kimi-advisor`
 - `/api/kimi-profile`
 
-For deployed environments, set the same Kimi/Moonshot variables as Cloudflare secrets or environment variables.
+Build and deploy:
+
+```bash
+npm run build
+npx wrangler deploy
+```
+
+Public URL:
+
+```text
+https://tanstack-start-app.carbon-twin-demo.workers.dev
+```
+
+If HTTPS is not ready yet, try:
+
+```text
+http://tanstack-start-app.carbon-twin-demo.workers.dev
+```
+
+For deployed environments, set Kimi/Moonshot values as Cloudflare secrets:
+
+```bash
+npx wrangler secret put MOONSHOT_API_KEY
+npx wrangler secret put KIMI_BASE_URL
+npx wrangler secret put KIMI_MODEL
+```
+
+Use these values for the non-secret Kimi settings:
+
+```text
+KIMI_BASE_URL=https://api.moonshot.ai/v1
+KIMI_MODEL=kimi-k2.6
+```
+
+Then redeploy:
+
+```bash
+npx wrangler deploy
+```
 
 ## Project Structure
 
