@@ -1,0 +1,25 @@
+{
+  "CH": {
+    "country": "Switzerland",
+    "annualKgCO2ePerCapita": 11000,
+    "homeBaselineKgCO2e": 1800
+  },
+  "CH-VD": {
+    "country": "Switzerland",
+    "region": "Vaud",
+    "annualKgCO2ePerCapita": 10600,
+    "homeBaselineKgCO2e": 1750
+  },
+  "CH-VD-Lausanne": {
+    "country": "Switzerland",
+    "region": "Vaud",
+    "city": "Lausanne",
+    "annualKgCO2ePerCapita": 10200,
+    "homeBaselineKgCO2e": 1700
+  },
+  "DEFAULT": {
+    "country": "Default",
+    "annualKgCO2ePerCapita": 10000,
+    "homeBaselineKgCO2e": 1800
+  }
+}

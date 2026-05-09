@@ -1,0 +1,108 @@
+{
+  "companyProfile": {
+    "name": "AlpineTech SA",
+    "location": "Lausanne, Vaud, Switzerland",
+    "employeesTotal": 420,
+    "employeesOnboarded": 186,
+    "industry": "Technology / Services",
+    "reportingContext": "Supplier to CSRD-covered enterprises",
+    "annualReductionGoalPercent": 15
+  },
+  "metrics": {
+    "estimatedEmployeeRelatedFootprintTons": 3260,
+    "potentialAnnualReductionTons": 410,
+    "averageTwinScore": "C+",
+    "activeCampaigns": 4
+  },
+  "breakdown": [
+    { "category": "Commuting", "percent": 34, "tons": 1108 },
+    { "category": "Business travel", "percent": 25, "tons": 815 },
+    { "category": "Meals & catering", "percent": 18, "tons": 587 },
+    { "category": "Procurement", "percent": 15, "tons": 489 },
+    { "category": "Remote-work energy", "percent": 8, "tons": 261 }
+  ],
+  "campaigns": [
+    {
+      "title": "Train-first business travel",
+      "category": "Mobility",
+      "description": "Nudge employees toward train routes for regional trips such as Lausanne-Milan, Lausanne-Zurich, and Lausanne-Paris when travel time remains practical.",
+      "potentialReductionTons": 120,
+      "effort": "Medium",
+      "confidence": "Directional",
+      "cta": "Start campaign"
+    },
+    {
+      "title": "Seasonal canteen menu",
+      "category": "Food",
+      "description": "Shift company meals and catered events toward seasonal Swiss produce and lower-impact proteins.",
+      "potentialReductionTons": 75,
+      "effort": "Low",
+      "confidence": "Directional",
+      "cta": "Create menu brief"
+    },
+    {
+      "title": "Repair before replacement",
+      "category": "Procurement",
+      "description": "Introduce a repair-first policy for small electronics, office equipment, clothing, and furniture before buying new.",
+      "potentialReductionTons": 40,
+      "effort": "Low",
+      "confidence": "Directional",
+      "cta": "Launch repair program"
+    },
+    {
+      "title": "Second-hand office equipment",
+      "category": "Procurement",
+      "description": "Source selected furniture, monitors, and office items through second-hand or refurbished providers.",
+      "potentialReductionTons": 55,
+      "effort": "Medium",
+      "confidence": "Directional",
+      "cta": "Find partners"
+    },
+    {
+      "title": "Residual carbon removal",
+      "category": "Residual emissions",
+      "description": "After reduction actions, estimate residual emissions and connect the company to verified carbon removal options.",
+      "potentialReductionTons": 250,
+      "effort": "Medium",
+      "confidence": "Directional",
+      "cta": "Explore carbon removal"
+    }
+  ],
+  "partners": [
+    {
+      "name": "Train-first travel planning",
+      "type": "Mobility",
+      "description": "Route employees toward lower-emission train options for regional travel.",
+      "action": "Open route planner",
+      "url": "https://www.sbb.ch/en"
+    },
+    {
+      "name": "Repair network",
+      "type": "Circular economy",
+      "description": "Connect employees and offices with repair cafes and repair-first programs.",
+      "action": "Find repair partners",
+      "url": "https://www.repaircafe-lausanne.ch/"
+    },
+    {
+      "name": "Second-hand procurement",
+      "type": "Procurement",
+      "description": "Source refurbished or second-hand office equipment and clothing.",
+      "action": "Request supplier quote",
+      "url": "https://www.tutti.ch/"
+    },
+    {
+      "name": "Carbon removal partner",
+      "type": "Residual emissions",
+      "description": "Explore verified carbon removal for hard-to-abate residual emissions.",
+      "action": "Estimate carbon removal",
+      "url": "https://www.myclimate.org/en/"
+    },
+    {
+      "name": "ESG consulting partner",
+      "type": "Reporting support",
+      "description": "Prepare internal ESG summaries or supplier questionnaire responses.",
+      "action": "Generate summary",
+      "url": "https://www.myclimate.org/en/information/about-myclimate/"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "swap-two-beef-meals",
+    "title": "Swap two beef meals",
+    "category": "food",
+    "location": "Lausanne, Vaud",
+    "effort": "low",
+    "estimatedKgCO2eSaved": 21,
+    "timeframe": "this week",
+    "description": "Replace two beef meals with lentils, tofu, chicken, or a mixed half-beef half-legume recipe."
+  },
+  {
+    "id": "rail-over-car-regional",
+    "title": "Move 30 km of driving to rail",
+    "category": "travel",
+    "location": "Lausanne, Vaud",
+    "effort": "medium",
+    "estimatedKgCO2eSaved": 5,
+    "timeframe": "this week",
+    "description": "Use Vaud and Swiss rail for one regular car trip."
+  },
+  {
+    "id": "second-hand-first",
+    "title": "Shop second-hand first",
+    "category": "shopping",
+    "location": "Lausanne, Vaud",
+    "effort": "low",
+    "estimatedKgCO2eSaved": 22,
+    "timeframe": "this month",
+    "description": "Check local resale or repair options before buying a new garment."
+  },
+  {
+    "id": "lower-heat-one-degree",
+    "title": "Lower heating by 1 degree",
+    "category": "home",
+    "location": "Switzerland",
+    "effort": "low",
+    "estimatedKgCO2eSaved": 8,
+    "timeframe": "this week",
+    "description": "A small thermostat change during heating season can reduce home energy demand."
+  }
+]

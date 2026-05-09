@@ -1,0 +1,17 @@
+{
+  "lausanne:milan": {
+    "origin": "Lausanne",
+    "destination": "Milan",
+    "distanceKmOneWay": 330,
+    "train": {
+      "kgCO2ePerPassengerKm": 0.012,
+      "durationMinutes": 210,
+      "notes": "EuroCity rail corridor through Switzerland and northern Italy."
+    },
+    "car": {
+      "kgCO2ePerVehicleKm": 0.19,
+      "durationMinutes": 255,
+      "notes": "Alpine motorway route; per-person emissions fall when passengers share one vehicle."
+    }
+  }
+}

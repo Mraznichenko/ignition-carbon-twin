@@ -1,0 +1,52 @@
+{
+  "beef": {
+    "label": "Beef",
+    "kgCO2ePerServing": 7.5,
+    "category": "protein"
+  },
+  "chicken": {
+    "label": "Chicken",
+    "kgCO2ePerServing": 2.2,
+    "category": "protein"
+  },
+  "lentils": {
+    "label": "Lentils",
+    "kgCO2ePerServing": 0.45,
+    "category": "protein"
+  },
+  "tofu": {
+    "label": "Tofu",
+    "kgCO2ePerServing": 0.75,
+    "category": "protein"
+  },
+  "vegetarian_meal": {
+    "label": "Vegetarian meal",
+    "kgCO2ePerServing": 0.7,
+    "category": "meal"
+  },
+  "bell_pepper_local_season": {
+    "label": "Bell peppers, local/EU season",
+    "kgCO2ePerServing": 0.25,
+    "category": "vegetable"
+  },
+  "bell_pepper_winter": {
+    "label": "Bell peppers, winter greenhouse/import",
+    "kgCO2ePerServing": 1.6,
+    "category": "vegetable"
+  },
+  "leek": {
+    "label": "Leek",
+    "kgCO2ePerServing": 0.18,
+    "category": "vegetable"
+  },
+  "cabbage": {
+    "label": "Cabbage",
+    "kgCO2ePerServing": 0.16,
+    "category": "vegetable"
+  },
+  "squash": {
+    "label": "Squash",
+    "kgCO2ePerServing": 0.2,
+    "category": "vegetable"
+  }
+}

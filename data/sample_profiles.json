@@ -1,0 +1,27 @@
+[
+  {
+    "id": "lausanne-demo",
+    "label": "Lausanne demo profile",
+    "country": "CH",
+    "region": "Vaud",
+    "city": "Lausanne",
+    "beefMealsPerWeek": 3,
+    "otherMeatMealsPerWeek": 4,
+    "vegetarianMealsPerWeek": 14,
+    "carKmPerWeek": 120,
+    "trainKmPerWeek": 60,
+    "flightsPerYear": 2,
+    "newClothesPerMonth": 2,
+    "secondHandSharePct": 20,
+    "homeSizeM2": 75,
+    "householdSize": 2,
+    "heatingType": "district",
+    "showerMinutesPerDay": 8,
+    "seasonalLocalFood": "sometimes",
+    "personalGoals": ["reduce_emissions", "save_money"],
+    "connectedSources": ["calendar_travel"],
+    "budgetSensitivity": "medium",
+    "willingnessDiet": "medium",
+    "willingnessTravel": "high"
+  }
+]
