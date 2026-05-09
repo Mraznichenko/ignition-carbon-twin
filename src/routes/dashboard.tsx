@@ -291,9 +291,9 @@ function Dashboard() {
               Private by default
             </p>
             <p className="mt-2 text-sm leading-6 text-muted-foreground">
-              Your profile answers and advisor conversation stay on your device in this prototype.
-              If you join a workspace, the organization only sees anonymized category-level trends
-              across people.
+              Your profile answers and advisor conversation stay on your device by default. If you
+              join a workspace, the organization only sees anonymized category-level trends across
+              people.
             </p>
           </div>
         </section>

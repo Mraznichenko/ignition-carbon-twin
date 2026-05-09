@@ -102,7 +102,7 @@ function Landing() {
                 onClick={loadDemoMode}
                 className="rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-medium text-primary shadow-sm hover:bg-emerald-100"
               >
-                Load demo mode
+                Load sample workspace
               </button>
               <p className="text-xs leading-5 text-muted-foreground">
                 Loads a Lausanne profile, joins AlpineTech, and opens the dashboard.

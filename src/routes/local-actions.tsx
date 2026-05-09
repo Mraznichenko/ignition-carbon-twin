@@ -67,11 +67,15 @@ function LocalActions() {
               <div className="grid h-11 w-11 place-items-center rounded-xl bg-[var(--primary-soft)] text-primary">
                 <a.icon className="h-5 w-5" />
               </div>
-              <span className="rounded-full bg-secondary px-2.5 py-1 text-xs text-muted-foreground">{a.tag}</span>
+              <span className="rounded-full bg-secondary px-2.5 py-1 text-xs text-muted-foreground">
+                {a.tag}
+              </span>
             </div>
             <h2 className="mt-4 text-lg font-semibold tracking-tight">{a.title}</h2>
             <p className="mt-2 flex-1 text-sm text-muted-foreground">{a.desc}</p>
-            <p className="mt-4 border-t border-border pt-3 text-xs font-medium text-primary">{a.impact}</p>
+            <p className="mt-4 border-t border-border pt-3 text-xs font-medium text-primary">
+              {a.impact}
+            </p>
           </article>
         ))}
       </div>

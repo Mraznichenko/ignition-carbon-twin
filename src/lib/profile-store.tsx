@@ -17,7 +17,9 @@ export function ProfileProvider({ children }: { children: ReactNode }) {
     try {
       const raw = localStorage.getItem(KEY);
       if (raw) setProfileState(JSON.parse(raw));
-    } catch {}
+    } catch {
+      localStorage.removeItem(KEY);
+    }
   }, []);
 
   const setProfile = (p: CarbonProfile | null) => {
@@ -25,10 +27,14 @@ export function ProfileProvider({ children }: { children: ReactNode }) {
     try {
       if (p) localStorage.setItem(KEY, JSON.stringify(p));
       else localStorage.removeItem(KEY);
-    } catch {}
+    } catch {
+      // Persistence is best-effort; the in-memory profile still works.
+    }
   };
 
-  return <ProfileContext.Provider value={{ profile, setProfile }}>{children}</ProfileContext.Provider>;
+  return (
+    <ProfileContext.Provider value={{ profile, setProfile }}>{children}</ProfileContext.Provider>
+  );
 }
 
 export const useProfile = () => useContext(ProfileContext);

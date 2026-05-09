@@ -116,7 +116,7 @@ function ProfilePage() {
     const nextWorkspace = MOCK_WORKSPACES[normalizedCode];
 
     if (!nextWorkspace) {
-      setWorkspaceError("Workspace code not recognized in this prototype.");
+      setWorkspaceError("Workspace code not recognized.");
       return;
     }
 
@@ -159,7 +159,7 @@ function ProfilePage() {
             onClick={() => setForm(DEMO_PROFILE)}
             className="inline-flex items-center gap-2 rounded-full bg-[var(--primary-soft)] px-4 py-2 text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground"
           >
-            <Sparkles className="h-4 w-4" /> Load demo profile
+            <Sparkles className="h-4 w-4" /> Load sample profile
           </button>
         </div>
       </div>
@@ -474,7 +474,7 @@ function ProfilePage() {
           />
           <p className="mt-3 text-xs leading-5 text-muted-foreground">
             Future versions can automatically learn from connected data. For now, these are manual
-            signals for the prototype.
+            signals you can include in the profile.
           </p>
         </Section>
 

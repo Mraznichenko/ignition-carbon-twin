@@ -55,7 +55,7 @@ This summary is designed to support internal ESG reporting, supplier sustainabil
 function CompanyPage() {
   const { companyProfile, metrics, breakdown, campaigns, partners } = companyDemo;
   const [summaryOpen, setSummaryOpen] = useState(false);
-  const [prototypeMessage, setPrototypeMessage] = useState("");
+  const [actionMessage, setActionMessage] = useState("");
 
   const onboardedPct = Math.round(
     (companyProfile.employeesOnboarded / companyProfile.employeesTotal) * 100,
@@ -64,9 +64,9 @@ function CompanyPage() {
   const copySummary = async () => {
     try {
       await navigator.clipboard.writeText(esrsSummary);
-      setPrototypeMessage("Summary copied to clipboard.");
+      setActionMessage("Summary copied to clipboard.");
     } catch {
-      setPrototypeMessage("Copy is unavailable in this browser, but the summary is visible here.");
+      setActionMessage("Copy is unavailable in this browser, but the summary is visible here.");
     }
   };
 
@@ -183,6 +183,12 @@ Carbon Twin is a reporting-support and climate action intelligence layer. In pro
               Export PDF evidence pack <Download className="h-4 w-4" />
             </button>
           </div>
+          {actionMessage ? (
+            <p className="mt-4 inline-flex items-center gap-2 rounded-full border border-teal-200 bg-white/80 px-3 py-1.5 text-sm font-medium text-teal-800">
+              <CheckCircle2 className="h-4 w-4" />
+              {actionMessage}
+            </p>
+          ) : null}
         </div>
 
         <div className="rounded-3xl border border-slate-200 bg-white/85 p-6 shadow-sm">
@@ -384,8 +390,8 @@ Carbon Twin is a reporting-support and climate action intelligence layer. In pro
               key={campaign.title}
               campaign={campaign}
               onAction={() =>
-                setPrototypeMessage(
-                  "This prototype would route the company to a campaign setup or partner workflow.",
+                setActionMessage(
+                  "This action opens the campaign setup or partner workflow in the full workspace.",
                 )
               }
             />
