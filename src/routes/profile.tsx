@@ -127,6 +127,12 @@ function ProfilePage() {
     setWorkspaceError("");
   };
 
+  const loadSampleProfile = () => {
+    setForm(DEMO_PROFILE);
+    setProfile(DEMO_PROFILE);
+    navigate({ to: "/dashboard" });
+  };
+
   const fillFromPrompt = async (mode: "replace" | "add" = "replace") => {
     if (!profilePrompt.trim()) return;
     setIsInferringProfile(true);
@@ -156,7 +162,7 @@ function ProfilePage() {
           </div>
           <button
             type="button"
-            onClick={() => setForm(DEMO_PROFILE)}
+            onClick={loadSampleProfile}
             className="inline-flex items-center gap-2 rounded-full bg-[var(--primary-soft)] px-4 py-2 text-sm font-medium text-primary hover:bg-primary hover:text-primary-foreground"
           >
             <Sparkles className="h-4 w-4" /> Load sample profile

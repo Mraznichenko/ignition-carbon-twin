@@ -94,42 +94,54 @@ Positioning note:
 Carbon Twin is a reporting-support and climate action intelligence layer. In production, audit, controls, evidence review, and filing workflows can be added around this structured evidence.`;
 
   const downloadPdfReport = async (variant: "summary" | "evidence") => {
-    const reportTitle =
-      variant === "summary" ? "ESRS-style climate action summary" : "Carbon Twin ESG evidence pack";
-    const reportBody = variant === "summary" ? esrsSummary : evidencePack;
-    const pdfBlob = await createCompanyReportPdf({
-      title: reportTitle,
-      body: reportBody,
-      companyName: companyProfile.name,
-      metrics: [
-        {
-          label: "Employee-linked footprint",
-          value: `${metrics.estimatedEmployeeRelatedFootprintTons.toLocaleString()} t CO2e/year`,
-        },
-        {
-          label: "Potential annual reduction",
-          value: `${metrics.potentialAnnualReductionTons} t CO2e/year`,
-        },
-        {
-          label: "Employees onboarded",
-          value: `${companyProfile.employeesOnboarded}/${companyProfile.employeesTotal}`,
-        },
-      ],
-      breakdown: breakdown.map((item) => ({
-        label: item.category,
-        value: `${item.tons.toLocaleString()} t · ${item.percent}%`,
-        percent: item.percent,
-      })),
-    });
-    const url = URL.createObjectURL(pdfBlob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download =
-      variant === "summary"
-        ? "carbon-twin-esrs-style-summary.pdf"
-        : "carbon-twin-evidence-pack.pdf";
-    link.click();
-    window.setTimeout(() => URL.revokeObjectURL(url), 30_000);
+    try {
+      setActionMessage("Preparing PDF export...");
+      const reportTitle =
+        variant === "summary"
+          ? "ESRS-style climate action summary"
+          : "Carbon Twin ESG evidence pack";
+      const reportBody = variant === "summary" ? esrsSummary : evidencePack;
+      const pdfBlob = await createCompanyReportPdf({
+        title: reportTitle,
+        body: reportBody,
+        companyName: companyProfile.name,
+        metrics: [
+          {
+            label: "Employee-linked footprint",
+            value: `${metrics.estimatedEmployeeRelatedFootprintTons.toLocaleString()} t CO2e/year`,
+          },
+          {
+            label: "Potential annual reduction",
+            value: `${metrics.potentialAnnualReductionTons} t CO2e/year`,
+          },
+          {
+            label: "Employees onboarded",
+            value: `${companyProfile.employeesOnboarded}/${companyProfile.employeesTotal}`,
+          },
+        ],
+        breakdown: breakdown.map((item) => ({
+          label: item.category,
+          value: `${item.tons.toLocaleString()} t · ${item.percent}%`,
+          percent: item.percent,
+        })),
+      });
+      const url = URL.createObjectURL(pdfBlob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download =
+        variant === "summary"
+          ? "carbon-twin-esrs-style-summary.pdf"
+          : "carbon-twin-evidence-pack.pdf";
+      link.rel = "noopener";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      setActionMessage("PDF export started.");
+      window.setTimeout(() => URL.revokeObjectURL(url), 30_000);
+    } catch (error) {
+      console.error(error);
+      setActionMessage("PDF export failed. Please try again or use Copy summary.");
+    }
   };
 
   const downloadSummary = () => {

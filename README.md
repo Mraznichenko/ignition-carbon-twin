@@ -56,8 +56,7 @@ Build and deploy:
 
 ```bash
 npm install
-npm run build
-npx wrangler deploy
+npm run deploy
 ```
 
 For deployed environments, set Kimi/Moonshot values as Cloudflare secrets:

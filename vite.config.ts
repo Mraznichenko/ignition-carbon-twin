@@ -5,8 +5,9 @@ import viteReact from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import tsConfigPaths from "vite-tsconfig-paths";
 
-export default defineConfig(({ command }) => ({
+export default defineConfig({
   plugins: [
+    cloudflare({ viteEnvironment: { name: "ssr" } }),
     tsConfigPaths(),
     tailwindcss(),
     tanstackStart({
@@ -15,7 +16,6 @@ export default defineConfig(({ command }) => ({
       },
     }),
     viteReact(),
-    command === "build" ? cloudflare() : null,
   ],
   resolve: {
     alias: {
@@ -27,4 +27,4 @@ export default defineConfig(({ command }) => ({
     port: 8080,
     strictPort: true,
   },
-}));
+});
