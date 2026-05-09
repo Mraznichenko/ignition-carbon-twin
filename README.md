@@ -41,15 +41,6 @@ The app runs on:
 http://localhost:8080
 ```
 
-Stop the local server with `Ctrl+C`.
-
-If port `8080` is stuck:
-
-```bash
-lsof -tiTCP:8080 -sTCP:LISTEN
-kill <PID>
-```
-
 Build for production:
 
 ```bash
@@ -77,8 +68,6 @@ KIMI_BASE_URL=https://api.moonshot.ai/v1
 ```
 
 If no API key is configured, the advisor falls back to deterministic local advice where available, and API-backed profile inference will report that the key is missing.
-
-Do not paste `.env.local` into chats, tickets, or docs. If a key is exposed, regenerate it.
 
 ## Prototype Flow
 
@@ -117,18 +106,6 @@ npm run build
 npx wrangler deploy
 ```
 
-Public URL:
-
-```text
-https://tanstack-start-app.carbon-twin-demo.workers.dev
-```
-
-If HTTPS is not ready yet, try:
-
-```text
-http://tanstack-start-app.carbon-twin-demo.workers.dev
-```
-
 For deployed environments, set Kimi/Moonshot values as Cloudflare secrets:
 
 ```bash
@@ -142,12 +119,6 @@ Use these values for the non-secret Kimi settings:
 ```text
 KIMI_BASE_URL=https://api.moonshot.ai/v1
 KIMI_MODEL=kimi-k2.6
-```
-
-Then redeploy:
-
-```bash
-npx wrangler deploy
 ```
 
 ## Project Structure
