@@ -68,7 +68,7 @@ function Landing() {
 
   return (
     <main>
-      <section className="mx-auto max-w-6xl px-4 pb-20 pt-10 md:pt-16">
+      <section className="mx-auto max-w-6xl px-4 pb-20 pt-6 md:pt-10">
         <div className="grid items-stretch gap-8 rounded-[2rem] border border-border bg-card/80 p-6 shadow-sm md:grid-cols-[1.1fr_0.9fr] md:p-10">
           <div className="flex h-full flex-col">
             <span className="inline-flex self-start items-center gap-2 rounded-full border border-border bg-secondary px-3 py-1 text-xs font-medium text-muted-foreground">
